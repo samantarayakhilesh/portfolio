@@ -903,56 +903,63 @@ code, pre, .font-mono {
 }
 
 /* --------------------------------------------------------------------------
-   9. Writings & Essays
+   9. Skills & Interests
    -------------------------------------------------------------------------- */
-.essay-list {
-  display: flex;
-  flex-direction: column;
-}
-
-.essay-row {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 0.75rem;
-  padding-block: 1.75rem;
-  border-bottom: 1px solid var(--border-color);
-  transition: opacity 0.15s ease;
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
 }
 
 @media (min-width: 768px) {
-  .essay-row {
-    flex-direction: row;
-    align-items: baseline;
-    gap: 2rem;
+  .skills-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 4.5rem;
   }
 }
 
-.essay-row:first-child {
-  padding-top: 0;
+.small-heading {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  margin: 0 0 1.25rem;
 }
 
-.essay-row:last-child {
-  border-bottom: none;
+.plain-list,
+.interest-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.essay-title {
-  font-size: 1.15rem;
-  font-weight: 700;
-  letter-spacing: -0.015em;
-  color: var(--text-primary);
-  margin-bottom: 0.4rem;
-}
-
-.essay-title:hover {
-  text-decoration: underline;
-}
-
-.essay-excerpt {
-  font-size: 0.8125rem;
+.plain-list li,
+.interest-list li {
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.9375rem;
   color: var(--text-secondary);
-  line-height: 1.6;
-  max-width: 60ch;
+  line-height: 1.5;
+}
+
+.plain-list li::before {
+  content: '—';
+  color: var(--text-muted);
+  margin-right: 0.75rem;
+}
+
+.interest-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 1.75rem;
+}
+
+@media (min-width: 768px) {
+  .interest-list {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -1041,6 +1048,25 @@ code, pre, .font-mono {
   outline: none;
   border-color: var(--accent);
   background-color: var(--bg-surface);
+}
+
+.contact-intro {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.contact-meta {
+  margin-bottom: 0;
+}
+
+.contact-card-kicker {
+  margin-bottom: 0.25rem;
+}
+
+.contact-submit-row {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .form-textarea {
