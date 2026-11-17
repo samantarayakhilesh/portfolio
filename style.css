@@ -488,20 +488,20 @@ code, pre, .font-mono {
 
 /* Pure CSS Filter Active State Rules */
 #filter-all:checked ~ .page-wrapper label[for="filter-all"],
-#filter-systems:checked ~ .page-wrapper label[for="filter-systems"],
-#filter-web:checked ~ .page-wrapper label[for="filter-web"],
-#filter-design:checked ~ .page-wrapper label[for="filter-design"],
-#filter-oss:checked ~ .page-wrapper label[for="filter-oss"] {
+#filter-strategy:checked ~ .page-wrapper label[for="filter-strategy"],
+#filter-analytics:checked ~ .page-wrapper label[for="filter-analytics"],
+#filter-fintech:checked ~ .page-wrapper label[for="filter-fintech"],
+#filter-venture:checked ~ .page-wrapper label[for="filter-venture"] {
   background-color: var(--bg-surface);
   color: var(--text-primary);
   box-shadow: var(--shadow-sm);
 }
 
 /* Pure CSS Project Card Visibility Filter */
-#filter-systems:checked ~ .page-wrapper .project-card:not([data-category="systems"]),
-#filter-web:checked ~ .page-wrapper .project-card:not([data-category="web"]),
-#filter-design:checked ~ .page-wrapper .project-card:not([data-category="design"]),
-#filter-oss:checked ~ .page-wrapper .project-card:not([data-category="oss"]) {
+#filter-strategy:checked ~ .page-wrapper .project-card:not([data-category="strategy"]),
+#filter-analytics:checked ~ .page-wrapper .project-card:not([data-category="analytics"]),
+#filter-fintech:checked ~ .page-wrapper .project-card:not([data-category="fintech"]),
+#filter-venture:checked ~ .page-wrapper .project-card:not([data-category="venture"]) {
   display: none !important;
 }
 
@@ -726,6 +726,28 @@ code, pre, .font-mono {
   margin-block: 1rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
   line-height: 1.5;
+}
+
+.modal-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.75rem;
+  margin-block: 1rem;
+}
+
+.modal-kpi-card {
+  padding: 0.75rem 1rem;
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+}
+
+.modal-kpi-card strong {
+  display: block;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
 }
 
 /* --------------------------------------------------------------------------
